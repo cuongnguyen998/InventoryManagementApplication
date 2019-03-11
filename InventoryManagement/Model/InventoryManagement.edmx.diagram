@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1bb4f8a82f894d6389659e73bfb2fdec" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="InventoryManagementModel.Customer" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.Input" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.InputInfo" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.Output" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.OutputInfo" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.Product" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.Supplier" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.Unit" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.UserRole" Width="1.5" PointX="7.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryManagementModel.User" Width="1.5" PointX="10" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="InventoryManagementModel.FK__OutputInf__Custo__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__InputInfo__Input__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__InputInfo__Statu__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__OutputInf__Input__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__OutputInf__Outpu__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__OutputInf__Statu__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__Products__Suppli__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__Products__UnitID__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryManagementModel.FK__Users__RollId__1BFD2C07" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

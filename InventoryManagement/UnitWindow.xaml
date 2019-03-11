@@ -1,0 +1,72 @@
+﻿<Window x:Class="InventoryManagement.UnitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManagement"
+        xmlns:uc="clr-namespace:InventoryManagement.UserControlLib"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        mc:Ignorable="d"
+        Name="unitWindow"
+        Title="Đơn vị tính" Height="450" Width="400"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <uc:ControlBarUC Tag="{Binding Title, ElementName=unitWindow}"></uc:ControlBarUC>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <materialDesign:Card Grid.Row="0" Margin="5">
+                <Grid>
+                    <TextBox Text="{Binding DisplayName, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Tên đơn vị tính"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="5 5 15 5"/>
+                </Grid>
+            </materialDesign:Card>
+            <materialDesign:Card Grid.Row="1" Margin="5">
+                <WrapPanel>
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" 
+                            Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                            Content="Thêm" Margin="5">
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" 
+                            Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                            Content="Xóa" Margin="5">
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" 
+                            Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                            Content="Sửa" Margin="5">
+                    </Button>
+                </WrapPanel>
+            </materialDesign:Card>
+            <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
+                <ListView ItemsSource="{Binding UnitList}" SelectedItem="{Binding SelectedUnit, Mode=OneWayToSource}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="STT" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                            <GridViewColumn Header="Tên đơn vị tính" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>
